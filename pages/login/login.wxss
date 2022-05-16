@@ -1,0 +1,22 @@
+/* pages/login/login.wxss */
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 600rpx;
+    margin-left: 50rpx;
+    margin-right: 50rpx;
+}
+
+.login{
+    color: #fff;
+    background: #68bb63;
+    height: 100rpx;
+    width: 100%;
+    line-height: 100rpx;
+    text-align: center;
+    border-radius: 20rpx;
+}
+
+.hover{
+    background: gray;
+}

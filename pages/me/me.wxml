@@ -1,0 +1,66 @@
+<!-- pages/me/me.wxml -->
+<view class="container">
+    <view class="userInfo">
+        <view class="tools">
+            <image src="/assets/images/tools/scan.png" class="img" bind:tap="scan"/>
+            <image src="/assets/images/tools/setting.png" class="img" />
+            <image src="/assets/images/tools/dialog.png" class="img" />
+        </view>
+        <view class="infoDetail">
+            <view class="touxiang">
+            <image src="/assets/images/dandou.png" class="img" />
+            </view>
+            <view class="phone">
+                <text>185****8888</text>
+            </view>
+        </view>
+        <!-- <view class="switch">切换为商家</view> -->
+        <view class="money">
+            <view class="wallet">
+                <text>0.00</text>
+                <text>钱包(元)</text>
+            </view>
+            <view class="owe">
+                <text>0.00</text>
+                <text>欠款(元)</text>
+            </view>
+            <view class="coupon">
+                <text>0</text>
+                <text>优惠券(张)</text>
+            </view>
+        </view>
+    </view>
+    <view class="myorder">
+        <view class="title">
+            <view class="order">
+                <text>我的订单</text>
+            </view>
+            <view class="allorder">
+                <text>全部订单 ></text>
+            </view>
+        </view>
+        <view class="status">
+            <view class="statuscell">
+                <image src="/assets/images/status/s1.png" class="img" />
+                <text>待付款</text>
+            </view>
+            <view class="statuscell">
+                <image src="/assets/images/status/s2.png" class="img" />
+                <text>待发货</text>
+            </view>
+            <view class="statuscell">
+                <image src="/assets/images/status/s3.png" class="img" />
+                <text>待收获</text>
+            </view>
+            <view class="statuscell">
+                <image src="/assets/images/status/s4.png" class="img" />
+                <text>待评价</text>
+            </view>
+            <view class="statuscell">
+                <image src="/assets/images/status/s5.png" class="img" />
+                <text>退款/售后</text>
+            </view>
+        </view>
+    </view>
+
+</view>

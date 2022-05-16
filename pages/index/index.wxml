@@ -1,0 +1,133 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="header">
+    <view class="product">
+      <image src="/assets/images/canchu.png" mode="aspectFit" class="img" />
+      <text>餐厨</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/dandou.png" mode="aspectFit" class="img" />
+      <text>蛋豆</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/dongroushuichan.png" mode="aspectFill" class="img" />
+      <text>冻肉水产</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/douzhipin.png" mode="aspectFit" class="img" />
+      <text>豆制品</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/ganhuo.png" mode="aspectFit" class="img" />
+      <text>干货</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/jiuyin.png" mode="aspectFit" class="img" />
+      <text>酒饮</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/kangyan.png" mode="aspectFit" class="img" />
+      <text>糠盐味精</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/lengdong.png" mode="aspectFit" class="img" />
+      <text>冷冻</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/miandian.png" mode="aspectFit" class="img" />
+      <text>面点</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/shucai.png" mode="aspectFit" class="img" />
+      <text>蔬菜</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/mimian.png" mode="aspectFit" class="img" />
+      <text>米面粮油</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/shushi.png" mode="aspectFit" class="img" />
+      <text>熟食</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/tiaoliao.png" mode="aspectFit" class="img" />
+      <text>调料调味</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/wanzi.png" mode="aspectFit" class="img" />
+      <text>丸子</text>
+    </view>
+    <view class="product">
+      <image src="/assets/images/xianrou.png" mode="aspectFit" class="img" />
+      <text>鲜肉水产</text>
+    </view>
+  </view>
+  <view class="body">
+    <view class="upper">
+      <view class="left">
+        <view class="promotion">
+          今日
+          <view class="red">特价</view>
+        </view>
+        |
+        <view class="desc">你想要的商品超低价</view>
+      </view>
+      <view class="right">
+        <view class="rushbuy" bind:tap="handRushBuy">限时抢购 ></view>
+      </view>
+    </view>
+    <view class="middle">
+      <view class="hot">
+        <view class="product">
+          <image src="/assets/images/kangyan.png" mode="aspectFit" class="img" />
+          <text class="price">￥4.0/斤</text>
+          <text class="desc">特惠推荐</text>
+        </view>
+        <view class="product">
+          <image src="/assets/images/mimian.png" mode="aspectFit" class="img" />
+          <text class="price">￥4.0/斤</text>
+          <text class="desc">特惠推荐</text>
+        </view>
+        <view class="product">
+          <image src="/assets/images/xianrou.png" mode="aspectFit" class="img" />
+          <text class="price">￥4.0/斤</text>
+          <text class="desc">回购率第一</text>
+        </view>
+        <view class="product">
+          <image src="/assets/images/douzhipin.png" mode="aspectFit" class="img" />
+          <text class="price">￥4.0/斤</text>
+          <text class="desc">特惠推荐</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="product">
+      <image src="/assets/images/yuanbao.png" mode="aspectFit" class="img" />
+      <text>[元宝]高筋富强小面粉</text>
+      <text class="monthsold">月售33.7万</text>
+      <text class="hotprice">￥103.8/袋</text>
+    </view>
+
+    <view class="product">
+      <image src="/assets/images/xiaodongbei.png" mode="aspectFit" class="img" />
+      <text>[小东北]火山石烤肠</text>
+      <text class="monthsold">月售2.3万</text>
+      <text class="hotprice">￥19.89/袋</text>
+    </view>
+
+    <view class="product">
+      <image src="/assets/images/yuanbao.png" mode="aspectFit" class="img" />
+      <text>[元宝]高筋富强小面粉</text>
+      <text class="monthsold">月售1.7万</text>
+      <text class="hotprice">￥77.8/袋</text>
+    </view>
+
+    <view class="product">
+      <image src="/assets/images/xiaodongbei.png" mode="aspectFit" class="img" />
+      <text>[小东北]火山石烤肠</text>
+      <text class="monthsold">月售222.7万</text>
+      <text class="hotprice">￥103.0/袋</text>
+    </view>
+  </view>
+</view>

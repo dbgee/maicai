@@ -1,0 +1,121 @@
+/* pages/me/me.wxss */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+}
+
+.userInfo{
+    display: flex;
+    flex-direction: column;
+    height: 400rpx;
+    width: 100%;
+    color: #fff;
+    background-color: #1ac764;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.userInfo .infoDetail{
+    display: flex;
+    width: 100%;
+}
+
+.userInfo .tools{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 40rpx;
+
+}
+
+.userInfo .tools image{
+    width: 60rpx;
+    height: 60rpx;
+    
+}
+
+.touxiang image{
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.userInfo .phone{
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    font-weight: bold;
+}
+
+.userInfo .money{
+    display: flex;
+    width: 100%;
+    height: 60rpx;
+    align-items: center;
+    justify-content: center;
+}
+
+.userInfo .money view{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 50rpx;
+    font-weight: bold;
+    padding: 0 50rpx;
+    margin-bottom: 50rpx;
+}
+
+.myorder{
+    margin-top: 25rpx;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    width: 100%;
+    height: 180rpx;
+    border: #f5f5f5 3rpx solid;
+    padding: 10rpx 40rpx;
+    justify-content: space-between;
+}
+
+.myorder .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-right: 100rpx;
+}
+
+.myorder .order{
+    font-weight: bold;
+    color: #333333;
+}
+
+.myorder .allorder{
+    font-size: 25rpx;
+}
+
+.myorder .img{
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.status{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 100rpx;
+}
+
+.statuscell{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statuscell text{
+    font-size: 25rpx;
+}

@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/me",
+    "pages/login/login",
+    "pages/test/test",
+    "pages/cart/cart",
+    "pages/favorite/favorite",
+    "pages/category/category"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "maicai",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/images/bar/index.png",
+        "selectedIconPath": "/assets/images/bar/index_2.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "全部菜品",
+        "iconPath": "/assets/images/bar/category.png",
+        "selectedIconPath": "/assets/images/bar/category_2.png"
+      },
+      {
+        "pagePath": "pages/favorite/favorite",
+        "text": "常用清单",
+        "iconPath": "/assets/images/bar/favorite.png",
+        "selectedIconPath": "/assets/images/bar/favorite_2.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "/assets/images/bar/cart.png",
+        "selectedIconPath": "/assets/images/bar/cart_2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/assets/images/bar/me.png",
+        "selectedIconPath": "/assets/images/bar/me_2.png"
+      }
+    ]
+  }
+}

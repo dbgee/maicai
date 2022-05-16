@@ -1,0 +1,153 @@
+/**index.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40rpx 40rpx;
+}
+
+.header{
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-around;
+  justify-content: center;
+
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.product{
+  display: flex;
+  flex-direction: column;
+  width: 135rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.img{
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.body{
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  align-content: space-around;
+
+  flex-direction: row;
+  width: 100%;
+  margin: 20 60rpx;
+
+  height: 200prx;
+  margin-top: 30rpx;
+}
+
+
+.body .promotion{
+  display: flex;
+  height: 40rpx;
+  font-size: 40rpx;
+}
+.body .desc{
+  display: flex;
+  height: 40rpx;
+  align-items: flex-end;
+  font-size: 25rpx;
+}
+
+.body .rushbuy{
+  font-size: 35rpx;
+}
+
+.body .upper{
+  display: flex;
+  width: 100%;
+}
+
+.body .left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.body .right{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 80rpx;
+}
+
+.body .promotion .red{
+  display: flex;
+  color: rgb(170, 5, 5);
+}
+
+
+.body .middle{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.middle .hot{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.middle .hot .product{
+  display: flex;
+  flex-direction: column;
+  width: 160rpx;
+  align-items: center;
+}
+
+.hot .product .desc{
+  color: #ef0102;
+  font-weight: bold;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  align-content: space-around;
+
+  flex-direction: row;
+  width: 100%;
+  margin: 20 60rpx;
+
+  height: 200prx;
+  margin-top: 30rpx;
+  justify-content: center;
+}
+
+.footer .product{
+  width: 300rpx;
+  height: 400rpx;
+}
+
+.footer .product .img{
+  width: 100%;
+  height: 250rpx;
+}
+
+.footer .product .monthsold{
+  font-size: 25rpx;
+  color: #9f6014;
+}
+
+
+
+.footer .product .hotprice{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #ef0102;
+}
