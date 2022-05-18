@@ -20,13 +20,24 @@ Page({
           duration: 700,
           mask: false,
           
-          success: (result) => {
+          success: (temp) => {
             
           },
           fail: () => {},
           complete: () => {}
         });
           
+      },
+      fail: () => {},
+      complete: () => {}
+    });
+      
+  },
+  toLogin(){
+    wx.navigateTo({
+      url: '/pages/login/login',
+      success: (result) => {
+        
       },
       fail: () => {},
       complete: () => {}

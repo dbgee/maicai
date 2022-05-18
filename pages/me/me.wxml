@@ -63,4 +63,10 @@
         </view>
     </view>
 
+    <view class="toLogin" bind:tap="toLogin">
+        <view class="iconfont icon-login"></view>
+        <text id="loginMsg">微信一键登录</text>
+    </view>
+
+
 </view>

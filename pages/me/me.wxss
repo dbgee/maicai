@@ -1,4 +1,7 @@
-/* pages/me/me.wxss */
+
+/* 引入icon css 文件 */
+@import "/font/iconfont.wxss";
+
 
 .container{
     display: flex;
@@ -59,16 +62,15 @@
     height: 60rpx;
     align-items: center;
     justify-content: center;
+    padding: 30rpx 10rpx;
 }
 
 .userInfo .money view{
     display: flex;
     flex-direction: column;
-    width: 33%;
+    width: 30%;
     height: 50rpx;
     font-weight: bold;
-    padding: 0 50rpx;
-    margin-bottom: 50rpx;
 }
 
 .myorder{
@@ -118,4 +120,23 @@
 
 .statuscell text{
     font-size: 25rpx;
+}
+
+.toLogin{
+    display: flex;
+    margin-top: 50rpx;
+    background-color: #1ac764;
+    color: #fff;
+
+    height: 100rpx;
+    justify-content: center;
+    align-items: center;
+    font-size: 40rpx;
+    border-radius: 20rpx;
+    margin: 50rpx 50rpx;
+
+}
+
+.toLogin #loginMsg{
+    margin-left: 20rpx;
 }

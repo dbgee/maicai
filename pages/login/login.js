@@ -1,4 +1,3 @@
-// pages/login/login.js
 
 Page({
 
@@ -8,44 +7,42 @@ Page({
 
 
   login(){
+    wx.setStorageSync("login", false);
+
     if(wx.getStorageSync("login") ){
-      wx.navigateTo({
-        url: '/pages/index/index'
+      wx.switchTab({
+        url: '/pages/me/me',
       });
+        
     }else{
 
       wx.login({
         timeout:10000,
         success: (result)=>{
-          console.log(result.code)
+          console.log("code="+result.code)
           wx.request({
             url: 'http://192.168.0.100:8080/login',
-            method:'post',
+            method:'POST',
             data:{
               code:result.code
             },
             header: {'content-type':'application/json'},
             success: (dev_result)=>{
               var data=dev_result.data;
-  
+              var openid=data['openid']
+              wx.setStorageSync("login", true);
+              wx.setStorageSync("openid", openid);
+              
+              console.log("openid="+openid)
+              
               wx.showModal({
                 title: '登录结果',
-                content: '恭喜，你已经登录成功\nsessionId:'+data.sessionId,
+                content: '恭喜，你已经登录成功\openid:'+openid,
                 showCancel:false,
                 confirmText: '我知道了',
                 confirmColor: '#3CC51F',
                 
-                success: (result) => {
-                  if(result.confirm){
-                    console.log("已经成功登录到开发服务器后台\nsessionId:"+data.sessionId)
-                    wx.setStorageSync("login", true);
-                    wx.navigateTo({
-                      url: '/pages/index/index'
-                    });
-                  }
-                },
-                fail: ()=>{},
-                complete: ()=>{}
+             
               });
             },
             fail: ()=>{
