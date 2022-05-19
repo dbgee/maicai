@@ -1,2 +1,57 @@
-<!--pages/productDetail/productDetail.wxml-->
-<text>pages/productDetail/productDetail.wxml</text>
+<view class="container">
+    <!-- 图片轮播 -->
+    <swiper id="swiper" indicator-dots="{{indicatorDots}}" 
+    indicator-color="{{indicatorColor	}}" 
+    indicator-active-color="{{indicatorActiveColor}}" 
+    autoplay="{{autoplay}}" interval="{{interval}}" 
+    duration="{{duration}}" vertical='{{vertical}}' circular='{{circular}}'>
+        <block wx:for="{{imgInfo}}" wx:key="id">
+            <swiper-item>
+                <image src="{{item.imgUrl}}" class="swipimg" />
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="description">
+        <view class="title">芹菜</view>
+        <view class="info">
+            <text class="category">芹菜</text>
+            <text class="method">计量秤重</text>
+            <view class="more">
+                少许夹心，粗细不均匀等，叶片偶有黄斑，属于正常现象，不影响食用。根部有氧化变色现象属正常现象；颜色：翠绿，茎挺直。
+            </view>
+        </view>
+
+    </view>
+
+    <view class="priceInfo">
+        <view class="price">
+            ￥5.18
+        </view>
+        <view class="more">
+            按实际重量多退少补
+        </view>
+    </view>
+
+    <view class="afterSale">
+        <view class="post">
+            <text class="name">配送</text>
+            <text class="content">由买菜配送，23:00 前下单，预计明天0:70~19:00 送达，购买150元起送</text>
+        </view>
+        <view class="service">
+            <text class="name">服务</text>
+            <text class="content">24小时内可退  可开发票</text>
+        </view>
+    </view>
+
+    <view class="footer">
+        <view class="left">
+            <view class="often">加常用</view>
+            <view class="contact">联系客服</view>
+            <view class="cart" bind:tap="toCart">购物车</view>
+        </view>
+        <view class="right" bind:tap="toCart">
+            加入购物车
+        </view>
+    </view>
+</view>

@@ -102,28 +102,28 @@
     </view>
   </view>
   <view class="footer">
-    <view class="product">
+    <view class="product" bind:tap="toProductDetail">
       <image src="/assets/images/yuanbao.png" mode="aspectFit" class="img" />
       <text>[元宝]高筋富强小面粉</text>
       <text class="monthsold">月售33.7万</text>
       <text class="hotprice">￥103.8/袋</text>
     </view>
 
-    <view class="product">
+    <view class="product" bind:tap="toProductDetail">
       <image src="/assets/images/xiaodongbei.png" mode="aspectFit" class="img" />
       <text>[小东北]火山石烤肠</text>
       <text class="monthsold">月售2.3万</text>
       <text class="hotprice">￥19.89/袋</text>
     </view>
 
-    <view class="product">
+    <view class="product" bind:tap="toProductDetail">
       <image src="/assets/images/yuanbao.png" mode="aspectFit" class="img" />
       <text>[元宝]高筋富强小面粉</text>
       <text class="monthsold">月售1.7万</text>
       <text class="hotprice">￥77.8/袋</text>
     </view>
 
-    <view class="product">
+    <view class="product" bind:tap="toProductDetail">
       <image src="/assets/images/xiaodongbei.png" mode="aspectFit" class="img" />
       <text>[小东北]火山石烤肠</text>
       <text class="monthsold">月售222.7万</text>

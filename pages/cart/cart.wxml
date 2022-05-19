@@ -1,36 +1,24 @@
 <!-- pages/cart/cart.wxml -->
 <view class="container">
-    <view class="items">
-        <radio bindtap="handRadio" checked="{{checked}}"></radio>
-        <image src="/assets/images/shucai.png" class="image" />
-        <view class="description">
-            <text class="title">大白菜普通（水洗）</text>
-            <text class="price">￥{{singlePrice}}/斤</text>
-            <text class="promotion">比加入时降0.52元</text>
+    <view class="items" wx:for="{{products}}" wx:key="id" >
+        <radio bindtap="handRadio" checked="{{item.selected}}" data-item="{{item}}" data-index="{{index}}" data-id="{{item.id}}"></radio>
+        <image src="/assets/images/shucai.png" class="image" bind:tap="toProductDetail"/>
+        <view class="description" bind:tap="toProductDetail">
+            <text class="title">{{item.title}}</text>
+            <text class="price">￥{{item.price}}/斤</text>
+            <text class="promotion">{{item.promotion}}</text>
         </view>
         <view class="change">
-            <image src="/assets/images/icon/minus.png" class="image" bind:tap="handleItemNum" data-type="0" />
-            <text>{{itemNumber}}</text>
-            <image src="/assets/images/icon/plus.png" class="image" bind:tap="handleItemNum" data-type="1" />
+            <image src="/assets/images/icon/minus.png" class="image" bind:tap="changeItemNum" data-item="{{item}}" data-num="{{item.itemNumber-1}}" data-index="{{index}}" />
+            <text>{{item.itemNumber}}</text>
+            <image src="/assets/images/icon/plus.png" class="image" bindtap="changeItemNum" data-item="{{item}}" data-num="{{item.itemNumber+1}}" data-index="{{index}}" />
         </view>
     </view>
-    <view class="items">
-        <radio bindtap="handRadio" checked="{{checked}}"></radio>
-        <image src="/assets/images/tiaoliao.png" class="image" />
-        <view class="description">
-            <text class="title">调料</text>
-            <text class="price">￥{{singlePrice}}/斤</text>
-            <text class="promotion">比加入时降0.52元</text>
-        </view>
-        <view class="change">
-            <image src="/assets/images/icon/minus.png" class="image" bind:tap="handleItemNum" data-type="0" />
-            <text>{{itemNumber}}</text>
-            <image src="/assets/images/icon/plus.png" class="image" bind:tap="handleItemNum" data-type="1" />
-        </view>
-    </view>
+
+
     <view class="footer">
         <view class="left">
-            <radio bindtap="handRadio" checked="{{checked}}"></radio>
+            <radio bindtap="selectAll" checked="{{allselected}}"></radio>
             <text>全选</text>
         </view>
         <view id="checkout">

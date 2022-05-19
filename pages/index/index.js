@@ -18,5 +18,11 @@ Page({
   handRushBuy(){
     console.log("抢购逻辑处理")
   },
+
+  toProductDetail(){
+    wx.navigateTo({
+      url: '/pages/productDetail/productDetail',
+    });
+  }
   
 })
