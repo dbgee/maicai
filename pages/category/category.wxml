@@ -1,2 +1,4 @@
-<!--pages/category/category.wxml-->
-<text>全部菜品，开发中呢...</text>
+
+<view class="container" hover-class="hover">
+    <view class="getData" bind:tap="getData">获取服务器数据</view>
+</view>

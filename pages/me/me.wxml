@@ -3,7 +3,7 @@
     <view class="userInfo">
         <view class="tools">
             <image src="/assets/images/tools/scan.png" class="img" bind:tap="scan"/>
-            <image src="/assets/images/tools/setting.png" class="img" />
+            <image src="/assets/images/tools/setting.png" class="img" bind:tap="setting"/>
             <image src="/assets/images/tools/dialog.png" class="img" />
         </view>
         <view class="infoDetail">

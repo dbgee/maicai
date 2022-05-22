@@ -1,1 +1,14 @@
-/* pages/category/category.wxss */
+#container{
+    display: flex;
+}
+
+.getData{
+    text-align: center;
+    width: 80%;
+    color: #fff;
+    background: #68bb63;
+}
+
+.hover{
+    background: gray;
+}

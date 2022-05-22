@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    temp:{}
   },
 
   scan(){
@@ -43,5 +43,35 @@ Page({
       complete: () => {}
     });
       
+  },
+  setting(){
+    wx.openSetting({
+      success: (result)=>{
+        if(!result.authSetting['scope.record']){
+          console.log('data='+result.authSetting['scope.record']);
+          wx.authorize({
+            scope: 'scope.record',
+            success: (result)=>{
+              console.log('成功获取麦克风权限');
+            },
+            fail: ()=>{},
+            complete: ()=>{}
+          });
+        }
+
+        if(!result.authSetting['scope.camera']){
+          wx.authorize({
+            scope: 'scope.camera',
+            success: (result)=>{
+              console.log('成功获取摄像头权限')
+            },
+            fail: ()=>{},
+            complete: ()=>{}
+          });
+        }
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
   }
 })

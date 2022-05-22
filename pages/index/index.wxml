@@ -1,66 +1,13 @@
 <!-- index.wxml -->
 <view class="container">
   <view class="header">
-    <view class="product">
-      <image src="/assets/images/canchu.png" mode="aspectFit" class="img" />
-      <text>餐厨</text>
+
+
+    <view class="product" wx:for="{{category}}" wx:key="id">
+        <image src="{{item.icon}}" mode="aspectFit" class="img" />
+        <text>{{item.name}}</text>
     </view>
-    <view class="product">
-      <image src="/assets/images/dandou.png" mode="aspectFit" class="img" />
-      <text>蛋豆</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/dongroushuichan.png" mode="aspectFill" class="img" />
-      <text>冻肉水产</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/douzhipin.png" mode="aspectFit" class="img" />
-      <text>豆制品</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/ganhuo.png" mode="aspectFit" class="img" />
-      <text>干货</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/jiuyin.png" mode="aspectFit" class="img" />
-      <text>酒饮</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/kangyan.png" mode="aspectFit" class="img" />
-      <text>糠盐味精</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/lengdong.png" mode="aspectFit" class="img" />
-      <text>冷冻</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/miandian.png" mode="aspectFit" class="img" />
-      <text>面点</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/shucai.png" mode="aspectFit" class="img" />
-      <text>蔬菜</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/mimian.png" mode="aspectFit" class="img" />
-      <text>米面粮油</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/shushi.png" mode="aspectFit" class="img" />
-      <text>熟食</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/tiaoliao.png" mode="aspectFit" class="img" />
-      <text>调料调味</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/wanzi.png" mode="aspectFit" class="img" />
-      <text>丸子</text>
-    </view>
-    <view class="product">
-      <image src="/assets/images/xianrou.png" mode="aspectFit" class="img" />
-      <text>鲜肉水产</text>
-    </view>
+
   </view>
   <view class="body">
     <view class="upper">
@@ -78,24 +25,10 @@
     </view>
     <view class="middle">
       <view class="hot">
-        <view class="product">
-          <image src="/assets/images/kangyan.png" mode="aspectFit" class="img" />
-          <text class="price">￥4.0/斤</text>
-          <text class="desc">特惠推荐</text>
-        </view>
-        <view class="product">
-          <image src="/assets/images/mimian.png" mode="aspectFit" class="img" />
-          <text class="price">￥4.0/斤</text>
-          <text class="desc">特惠推荐</text>
-        </view>
-        <view class="product">
-          <image src="/assets/images/xianrou.png" mode="aspectFit" class="img" />
-          <text class="price">￥4.0/斤</text>
-          <text class="desc">回购率第一</text>
-        </view>
-        <view class="product">
-          <image src="/assets/images/douzhipin.png" mode="aspectFit" class="img" />
-          <text class="price">￥4.0/斤</text>
+
+        <view class="product" wx:for="{{itemList}}" wx:key="skuid" wx:if="{{index<4}}">
+          <image src="{{item.picUrl}}" mode="aspectFit" class="img" />
+          <text class="price">{{item.sellPrice.text}}/斤</text>
           <text class="desc">特惠推荐</text>
         </view>
       </view>
