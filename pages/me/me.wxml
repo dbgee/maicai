@@ -2,9 +2,9 @@
 <view class="container">
     <view class="userInfo">
         <view class="tools">
-            <image src="/assets/images/tools/scan.png" class="img" bind:tap="scan"/>
-            <image src="/assets/images/tools/setting.png" class="img" bind:tap="setting"/>
-            <image src="/assets/images/tools/dialog.png" class="img" />
+            <image  class="iconfont icon-scan" bind:tap="scan"/>
+            <image  class="iconfont icon-setting" bind:tap="setting"/>
+            <image  class="iconfont icon-logout" bind:tap="toLogout"/>
         </view>
         <view class="infoDetail">
             <view class="touxiang">
@@ -64,8 +64,8 @@
     </view>
 
     <view class="toLogin" bind:tap="toLogin">
-        <view class="iconfont icon-login"></view>
-        <text id="loginMsg">微信一键登录</text>
+        <view class="iconfont icon-denglu-weixindenglu" id="loginIcon"></view>
+        <text id="loginMsg">{{login_btnName}}</text>
     </view>
 
 

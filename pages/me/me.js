@@ -5,7 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-    temp:{}
+    temp:{},
+    login_btnName:'微信一键登录'
+  },
+
+  onLoad(){
+    var appInst =  getApp();
+    var login_btnName=appInst.globalData.login_btnName;
+    this.setData({
+      login_btnName
+    })
+  },
+
+  onShow(){
+    var appInst =  getApp();
+    var login_btnName=appInst.globalData.login_btnName;
+    this.setData({
+      login_btnName
+    })
+  },
+
+  toLogout(){
+    var that=this
+    var login_btnName="微信一键登录"
+    getApp().globalData.login_btnName=login_btnName
+    wx.showModal({
+      content: '确认是否退出登录？',
+      showCancel: true,
+      cancelText: '取消',
+      cancelColor: '#000000',
+      confirmText: '确定',
+      confirmColor: '#3CC51F',
+      success: (result) => {
+        if(result.confirm){
+          console.log('已退出登录');
+          that.setData({
+            login_btnName
+          })
+        }
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
+    
   },
 
   scan(){
@@ -34,14 +76,20 @@ Page({
       
   },
   toLogin(){
-    wx.navigateTo({
-      url: '/pages/login/login',
-      success: (result) => {
-        
-      },
-      fail: () => {},
-      complete: () => {}
-    });
+    if(getApp().globalData.login_btnName=="已登录"){
+      wx.showModal({
+        title: '',
+        content: '您已登录，无需重复登录',
+        showCancel: false,
+        confirmText: '我知道了',
+        confirmColor: '#3CC51F',
+      });
+    }else{
+      wx.navigateTo({
+        url: '/pages/login/login',
+      });
+    }
+    
       
   },
   setting(){

@@ -38,7 +38,8 @@
 .userInfo .tools image{
     width: 60rpx;
     height: 60rpx;
-    
+    font-size: 50rpx;
+    margin-top: 5rpx;
 }
 
 .touxiang image{
@@ -140,3 +141,9 @@
 .toLogin #loginMsg{
     margin-left: 20rpx;
 }
+
+.toLogin #loginIcon{
+    font-size: 60rpx;
+}
+
+

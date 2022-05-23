@@ -1,6 +1,6 @@
 <!--pages/login/login.wxml-->
 <view class="container">
     <view class="login" hover-class="hover" bind:tap="login">
-        微信一键登录
+        {{login_btnName}}
     </view>
 </view>
