@@ -15,6 +15,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    login_btnName:'微信一键登录'
+    login_btnName:'微信一键登录',
+    category_id:0
   }
 })

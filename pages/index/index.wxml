@@ -1,13 +1,10 @@
 <!-- index.wxml -->
 <view class="container">
   <view class="header">
-
-
-    <view class="product" wx:for="{{category}}" wx:key="id">
-        <image src="{{item.icon}}" mode="aspectFit" class="img" />
-        <text>{{item.name}}</text>
+    <view class="product" wx:for="{{category}}" wx:key="id" bind:tap="toCategory" data-id="{{item.id}}">
+      <image src="{{item.icon}}" mode="aspectFit" class="img" />
+      <text>{{item.name}}</text>
     </view>
-
   </view>
   <view class="body">
     <view class="upper">
@@ -23,10 +20,8 @@
         <view class="rushbuy" bind:tap="handRushBuy">限时抢购 ></view>
       </view>
     </view>
-
     <view class="middle">
       <view class="hot">
-
         <view class="product" wx:for="{{itemList}}" wx:key="skuid" wx:if="{{index<4}}">
           <image src="{{item.picUrl}}" mode="aspectFit" class="img" />
           <text class="price">{{item.sellPrice.text}}/斤</text>
@@ -36,13 +31,11 @@
     </view>
   </view>
   <view class="footer">
-
     <view class="product" bind:tap="toProductDetail" wx:for="{{skuItems}}" wx:key="skuId" wx:if="{{item.skuId!=93724 && index<7}}">
       <image src="{{item.picUrl}}" mode="aspectFit" class="img" />
       <text class="title">{{item.skuTitle.text}}</text>
       <text class="monthsold">月售{{item.skuId}} {{item.sellUnit.text}}</text>
       <text class="hotprice">{{item.sellPrice.text}}/{{item.sellUnit.text}}</text>
     </view>
-
   </view>
 </view>

@@ -70,11 +70,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    var appInst =  getApp();
+
     var category=wx.getStorageSync("category");
     this.setData({
       category,
     })
   },
+
+  onShow(){
+    var category_id=getApp().globalData.category_id
+    console.log('id='+category_id);
+    this.setData({
+      activeItem:category_id
+    })
+  }
 
 });

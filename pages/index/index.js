@@ -8,7 +8,18 @@ Page({
     category: [],
     skuItems: [],
     itemList: [],
-    temp:[]
+    temp: [],
+  },
+
+  toCategory(e) {
+    var id = e.currentTarget.dataset.id;
+    console.log(e);
+    console.log("index_id=" + id);
+    app.globalData.category_id = id;
+
+    wx.switchTab({
+      url: "/pages/category/category",
+    });
   },
 
   getProductDetail() {
@@ -98,10 +109,10 @@ Page({
         var item = result.data.skuId2SkuItemMap;
         console.log("item" + item);
         console.log("data:" + result.data);
-        var temp=result.data
+        var temp = result.data;
         this.setData({
-          temp
-        })
+          temp,
+        });
         wx.setStorageSync("temp", temp);
 
         // 登录凭证过期，待解决
@@ -137,11 +148,12 @@ Page({
     });
   },
 
-  onShareAppMessage(){
-    return{
-      title:"大家一起来买菜",
-      path:'/pages/index/index',
-      imageUrl:'https://p1.meituan.net/mallimages/4eccfc30b6bf1de3f90881ce4346250142254.png'
-    }
-  }
+  onShareAppMessage() {
+    return {
+      title: "大家一起来买菜",
+      path: "/pages/index/index",
+      imageUrl:
+        "https://p1.meituan.net/mallimages/4eccfc30b6bf1de3f90881ce4346250142254.png",
+    };
+  },
 });
