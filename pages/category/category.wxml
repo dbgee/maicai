@@ -1,4 +1,24 @@
-
-<view class="container" hover-class="hover">
-    <view class="getData" bind:tap="getData">获取服务器数据</view>
+<view class="container">
+    <view class="nav_left">
+        <view class="item  {{activeItem == item.id ? 'active' :'' }}" wx:key="id" wx:for="{{category}}" data-id="{{item.id}}" bind:tap="selectItem">
+            {{item.name}}
+        </view>
+    </view>
+    <view class="nav_right">
+        <view class="item" wx:for="{{products}}" wx:key="id">
+            <image class="productImage" src="https://p0.meituan.net/mallimages/9f99ed08ca838706d84df5fbc2eabf9a37782.png" mode="aspectFit"></image>
+            <view class="description">
+                <text class="title">{{item.title}}</text>
+                <text class="price">￥{{item.price}}/斤</text>
+                <text class="sellPoint">菜农直供</text>
+            </view>
+            <view class="iconfont icon-add" src="" id="selectButton" bind:tap="selectProduct" wx:if="{{!item.select}}" data-index="{{index}}"></view>
+            <view class="change" wx:if="{{item.select}}" >
+                <image src="/assets/images/icon/minus.png" bind:tap="changeItemNum" data-item="{{item}}" data-num="{{item.itemNumber-1}}" data-index="{{index}}" />
+                <text>{{item.itemNumber}}</text>
+                <image src="/assets/images/icon/plus.png" bindtap="changeItemNum" data-item="{{item}}" data-num="{{item.itemNumber+1}}" data-index="{{index}}" />
+            </view>
+        </view>
+        
+    </view>
 </view>

@@ -37,7 +37,7 @@
   </view>
   <view class="footer">
 
-    <view class="product" bind:tap="toProductDetail" wx:for="{{skuItems}}" wx:key="skuId" wx:if="{{index!=1}}">
+    <view class="product" bind:tap="toProductDetail" wx:for="{{skuItems}}" wx:key="skuId" wx:if="{{item.skuId!=93724 && index<7}}">
       <image src="{{item.picUrl}}" mode="aspectFit" class="img" />
       <text class="title">{{item.skuTitle.text}}</text>
       <text class="monthsold">月售{{item.skuId}} {{item.sellUnit.text}}</text>

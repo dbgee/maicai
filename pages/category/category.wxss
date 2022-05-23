@@ -1,14 +1,112 @@
-#container{
+/* 引入icon css 文件 */
+@import "/font/iconfont.wxss";
+
+.container {
+  display: flex;
+  height: 100%;
+  padding: 5rpx 10rpx;
+}
+
+
+.nav_left {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+
+  border: green 1rpx solid;
+  width: 200rpx;
+
+}
+
+.nav_left .active {
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+.nav_left .item {
+  padding: 20rpx 0;
+  width: 200rpx;
+  height: 50rpx;
+}
+
+.nav_right{
     display: flex;
+    flex-direction: column;
+    border: red 1rpx solid;
+
+    margin-right: 0 5rpx;
+    width: 100%;
+
+    background-color: #f5f5f5;
+    
 }
 
-.getData{
+.nav_right .item{
+    margin-bottom: 10rpx;
+    display: flex;
+    width: 100%;
+    height: 230rpx;
+    border: rgb(54, 13, 218) 1rpx solid;
+
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.nav_right .item .productImage{
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.nav_right .item .description{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    z-index: 1;
+    justify-content: space-around;
+}
+
+.nav_right .item .description .title{
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #333333;
+}
+
+.nav_right .item .description .price{
+    font-size: 35rpx;
+    font-weight: bold;
+    color: #ff5c00;
+}
+
+.nav_right .item .description .sellPoint{
+    width: 4.5em;
     text-align: center;
-    width: 80%;
-    color: #fff;
-    background: #68bb63;
+    font-size: 30rpx;
+    color: #ffffff;
+    background-color: #15bb5c;
 }
 
-.hover{
-    background: gray;
+#selectButton{
+    font-size: 60rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #15bb5c;
+}
+
+.change{
+    display: flex;
+    height: 50rpx;
+    width: 200rpx;
+    background-color: #fafafa;
+    opacity: 0.8;
+    justify-content: space-around;
+
+  }
+
+.change image{
+    width: 50rpx;
+    height: 50rpx;
+
+    z-index: 2;
 }
